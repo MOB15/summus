@@ -115,22 +115,25 @@ body {
 /* POSICIONAMENTO DA PLACA QR CODE */
 .qr-code-wrapper {
     position: absolute;
-    top: 42.5%;
-    left: 61.5%;
-    width: 8vw;
-    min-width: 90px;
+    top: 40%;
+    left: 63%;
+    width: 9vw;
+    min-width: 110px;
+    height: 160px;
     z-index: 5;
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    background: transparent;
 }
 
 .qr-code-wrapper:hover {
-    transform: scale(1.05);
+    transform: rotate(-4deg) scale(1.05);
 }
-
 .qr-svg-img {
     width: 100%;
     height: auto;
     display: block;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .scroll-indicator {
