@@ -1,11 +1,10 @@
 @font-face {
   font-family: 'Gully';
-  src: url('assets/fonts/Gully.ttf') format('truetype');
+  src: url('assets/fonts/Gully.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 :root {
     --burgundy: #801438;
     --white: #ffffff;
