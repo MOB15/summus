@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght=1,500;1,600;1,700&display=swap');
+
+:root {
+    --burgundy: #801438;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+.text-burgundy { color: var(--burgundy); }
+
+/* 1. HERO SECTION */
+.section-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    background: url('assets/hero-scene.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn-demo {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.nav-btn-demo:hover {
+    background: var(--white);
+    color: var(--burgundy);
+}
+
+.nav-btn-contact:hover {
+    opacity: 0.8;
+}
+
+.hero-content {
+    max-width: 540px;
+    color: var(--white);
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 4.5vw, 64px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: clamp(14px, 1.2vw, 18px);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+}
+
+/* POSICIONAMENTO DA PLACA QR CODE */
+.qr-code-wrapper {
+    position: absolute;
+    top: 42.5%;
+    left: 61.5%;
+    width: 8vw;
+    min-width: 90px;
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.qr-code-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.qr-svg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.btn-scroll {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.btn-scroll:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 968px) {
+    .nav-links { display: none; }
+    .qr-code-wrapper { display: none; }
+}
+
+/* ==========================================================================
+   SECÇÃO 2: FEATURES (TUDO BRANCO / ALINHAMENTO IGUAL À IMAGEM)
+   ========================================================================== */
+
+:root {
+    --green-accent: #006847;
+    --muted-bordeaux: #96354e;
+}
+
+.text-green { 
+    color: var(--green-accent); 
+}
+
+.section-features {
+    width: 100%;
+    background-color: #ffffff; /* Fundo totalmente branco */
+    padding: 90px 12% 140px 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
+
+/* Barra de Subtítulos/Tags Superiores */
+.features-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 40px;
+}
+
+.features-top-bar span {
+    font-size: 14px;
+    color: var(--muted-bordeaux);
+    font-weight: 400;
+    letter-spacing: -0.2px;
+}
+
+/* Configuração da Grelha Principal */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr; /* Duas colunas perfeitas */
+    grid-row-gap: 90px;
+    grid-column-gap: 60px;
+}
+
+/* Blocos de Texto Individual */
+.headline-block h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    letter-spacing: -0.5px;
+}
+
+.step-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+/* Ajuste específico para o Passo 2 ficar ligeiramente empurrado para o centro */
+.pad-left-adjustment {
+    padding-left: 60px;
+}
+
+/* Envoltório e tamanho dos teus ficheiros SVG */
+.step-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    min-width: 46px; /* Evita que o ícone encolha se o texto for grande */
+}
+
+.feature-img-icon {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.step-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.step-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+/* Pequena bola bordeaux com o número */
+.step-badge {
+    background-color: var(--burgundy);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -6px;
+    top: -12px; /* Flutua exatamente no topo esquerdo */
+}
+
+.step-title-row h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.3px;
+    padding-left: 14px; /* Abre espaço para o número */
+}
+
+.step-text-content p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.45;
+    font-weight: 400;
+}
+
+/* Responsividade Básica para ecrãs mais pequenos */
+@media (max-width: 968px) {
+    .features-top-bar {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 60px;
+    }
+    .pad-left-adjustment {
+        padding-left: 0;
+    }
+}
